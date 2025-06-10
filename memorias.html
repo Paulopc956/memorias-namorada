@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Memórias</title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Dancing Script', cursive;
+      font-size: 30px;
+      line-height: 1.7;
+      padding: 60px 100px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .texto {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 2;
+      position: relative;
+    }
+
+    .quadrado {
+      display: inline-block;
+      border: 2px solid white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      font-weight: bold;
+      font-size: 32px;
+      color: #ff4d4d;
+    }
+
+    .voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 0 10px red;
+    }
+
+    .decoracao-lateral {
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      pointer-events: none;
+      z-index: 1;
+      animation: flutuar 3s infinite alternate;
+    }
+
+    .decoracao-lateral img {
+      width: 50px;
+    }
+
+    .decoracao-esquerda {
+      left: 130px; /* fora da área da foto */
+    }
+
+    .decoracao-direita {
+      right: 130px;
+    }
+
+    .fotos-lateral {
+      position: fixed;
+      top: 10%;
+      height: 80%;
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .fotos-esquerda {
+      left: 10px;
+    }
+
+    .fotos-direita {
+      right: 10px;
+    }
+
+    .fotos-lateral img {
+      height: 180px;
+      border-radius: 15px;
+      border: 4px solid white;
+      margin: 12px 0;
+    }
+
+    @keyframes flutuar {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(15px); }
+    }
+
+    .coracao {
+      position: fixed;
+      color: red;
+      font-size: 24px;
+      animation: cair linear infinite;
+      user-select: none;
+      z-index: 0;
+    }
+
+    @keyframes cair {
+      0% {
+        top: -10%;
+        opacity: 1;
+      }
+      100% {
+        top: 110%;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Memórias com Música</title>
+  <style>
+    /* Estilo do botão de música */
+    #playMusicBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Memórias com Música</title>
+  <style>
+    /* Estilo do botão de música */
+    #playMusicBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Música em MP3 -->
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <!-- Botão para tocar a música -->
+  <button id="playMusicBtn">🔊 Tocar Música</button>
+
+  <script>
+    const audio = document.getElementById('musica');
+    const playBtn = document.getElementById('playMusicBtn');
+
+    // Toca a música quando o botão é clicado
+    playBtn.addEventListener('click', () => {
+      audio.play().then(() => {
+        playBtn.style.display = 'none'; // Esconde botão depois que tocar
+      }).catch((error) => {
+        alert("Erro ao tentar tocar a música: " + error.message);
+      });
+    });
+  </script>
+
+</body>
+
+  <!-- Botão de voltar -->
+  <button class="voltar" onclick="window.location.href='Feliz Dia dos Namorados e nosso dia 11.html'">← Voltar</button>
+
+  <!-- Flores e corações animados nas laterais -->
+  <div class="decoracao-lateral decoracao-esquerda">
+    <img src="https://em-content.zobj.net/thumbs/120/apple/354/red-heart_2764-fe0f.png" alt="coração">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="flor">
+    <img src="https://em-content.zobj.net/thumbs/120/apple/354/red-heart_2764-fe0f.png" alt="coração">
+  </div>
+
+  <div class="decoracao-lateral decoracao-direita">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="flor">
+    <img src="https://em-content.zobj.net/thumbs/120/apple/354/red-heart_2764-fe0f.png" alt="coração">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="flor">
+  </div>
+
+  <!-- Fotos laterais -->
+  <div class="fotos-lateral fotos-esquerda">
+    <img src="Meu_Amor10.jpg" alt="Foto 1">
+    <img src="Meu_Amor5.jpg" alt="Foto 2">
+    <img src="Meu_Amor6.jpg" alt="Foto 3">
+  </div>
+
+  <div class="fotos-lateral fotos-direita">
+    <img src="Meu_Amor7.jpg" alt="Foto 4">
+    <img src="Meu_Amor9.jpg" alt="Foto 5">
+  </div>
+
+  <!-- Chuva de corações -->
+  <script>
+    function criarCoracao() {
+      const coracao = document.createElement("div");
+      coracao.classList.add("coracao");
+      coracao.innerText = Math.random() > 0.5 ? "❤️" : "🌸";
+      const lateral = Math.random() < 0.5 ? '25vw' : '75vw'; // lateral esquerda ou direita
+      coracao.style.left = lateral;
+      coracao.style.animationDuration = (3 + Math.random() * 2) + "s";
+      coracao.style.fontSize = (24 + Math.random() * 16) + "px";
+      document.body.appendChild(coracao);
+      setTimeout(() => coracao.remove(), 6000);
+    }
+    setInterval(criarCoracao, 400);
+  </script>
+
+  <!-- Texto principal -->
+  <div class="texto">
+    <p>Parabéns, você acessou a página de nossas memórias. Aproveite o momento, é simples mas é de coração.❤</p>
+
+    <p>Há exatamente <span class="quadrado">152</span> dias eu conheci a garota mais especial da minha vida, a menina do "O meu carro" kkkkk nunca vou me esquecer desse dia, o dia em q percebi q vc era a escolhida para a minha vida. Nosso juramento de dedinho, nossas promessas, nossas risadas, o abraço envergonhado, o beijo envergonhado kkk quem diria q a menina q eu mais odiava iria virar a menina q eu mais amo, ainda bem q te procurei no ttk heheh. Com voce me sinto tão feliz, o mundo fica mais colorido e feliz. Lembra quando fomos se ver e vc me comprou uma caixinha de chocolate? Nossa, aquele dia eu fiquei muito feliz kkkk foi a melhor coisa depois do carrinho da Hot Wheels KKK Q EU AMEI E SOU APAIXONADO NELE!!!! O dia q fui conhecer seus pais, morrendo de vergonha da sua mãe kkkk mas foi a melhor coisa, sua mãe é 10 e seu pai tbem. Quero te agradecer por ter me dado mais uma chance, eu não consigo me imaginar ficar sem você, foram dias dificies mas você voltou, e eu prezo muito por isso. Obrigado por me aguentar nos dias em q meus ciúmes tomam contam de mim, nos meus dias chatos e insuportáveis mas tudo isso é medo de perder você. Você é meu porto seguro, minha melhor amiga e o amor da minha vida. E se tudo isso já aconteceu até aqui, mal posso esperar pelas memórias que ainda vamos criar.
+
+Te amo por tudo o que vivemos, e por tudo que ainda vem pela frente. Minha princesa pitica.❤</p>
+
+    <p>Desconsidere os erros ortográficos kakakak.</p>
+  </div>
+
+</body>
+</html>
